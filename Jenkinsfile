@@ -20,7 +20,7 @@ pipeline {
                 }
             }
         }
-        /* stage('Build Image') {
+        stage('Build Image') {
             steps {
                 sh '''
                     docker build --no-cache -t product-catalog-image:latest .
@@ -32,11 +32,11 @@ pipeline {
         stage('Push Image') {
             steps {
                 sh '''
-                    docker login --username akmaharshi --password sairam123
+                    docker login --username <docker username> --password <docker password>
                     docker push akmaharshi/product-catalog-image:v${BUILD_NUMBER}
                 '''
             }
-        } */
+        } 
     }
 
     post {
